@@ -18,5 +18,7 @@ Feedback is much appreciated!
 
 ## Contact
 Innotronic Ingenieurbüro GmbH
+
 Lerzenstrasse 27, 8953 Dietikon, Switzerland
+
 (http://www.inno.ch/)
