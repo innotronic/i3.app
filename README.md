@@ -11,14 +11,10 @@ Download the app from the [AppStore](https://itunes.apple.com/us/app/inno-ip-inf
 
 
 ## Project
-Look at the project website (http://ip.inno.ch/) for the web app and a CLI tool.
+Look at the project website [ip.inno.ch](http://ip.inno.ch/) for the web app and a CLI tool.
 
 Feedback is much appreciated!
 
 
 ## Contact
-Innotronic Ingenieurbüro GmbH
-
-Lerzenstrasse 27, 8953 Dietikon, Switzerland
-
-(http://www.inno.ch/)
+Innotronic Ingenieurbüro GmbH, [www.inno.ch](http://www.inno.ch/)
