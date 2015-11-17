@@ -23,6 +23,7 @@ class i3ViewController: UITableViewController
     @IBOutlet weak var ipv6Country: UILabel!
     @IBOutlet weak var ipv6Description: UILabel!
     
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
