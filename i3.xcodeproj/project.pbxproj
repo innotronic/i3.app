@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71F20B571BFB3C1F00D3FAB4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 71F20B561BFB3C1F00D3FAB4 /* README.md */; };
 		71F6DBAC1B343528001F507F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6DBAB1B343528001F507F /* AppDelegate.swift */; };
 		71F6DBAE1B343528001F507F /* i3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6DBAD1B343528001F507F /* i3ViewController.swift */; };
 		71F6DBB11B343528001F507F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F6DBAF1B343528001F507F /* Main.storyboard */; };
@@ -160,7 +159,6 @@
 			files = (
 				71F6DBAE1B343528001F507F /* i3ViewController.swift in Sources */,
 				71F6DBCC1B343F04001F507F /* api.swift in Sources */,
-				71F20B571BFB3C1F00D3FAB4 /* README.md in Sources */,
 				71F6DBAC1B343528001F507F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

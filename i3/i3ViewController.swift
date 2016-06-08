@@ -30,13 +30,13 @@ class i3ViewController: UITableViewController
         
         
         // Refresh action
-        self.refreshControl?.addTarget( self, action: "updateInfo", forControlEvents: UIControlEvents.ValueChanged )
+        self.refreshControl?.addTarget( self, action: #selector(i3ViewController.updateInfo), forControlEvents: UIControlEvents.ValueChanged )
         
         
         // Notification if app becomes active
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: "updateInfo",
+            selector: #selector(i3ViewController.updateInfo),
             name: UIApplicationDidBecomeActiveNotification,
             object: nil
         )
@@ -93,11 +93,11 @@ class i3ViewController: UITableViewController
                     if let dict = json
                     {
                         // Update information
-                        self.ipv4Address.text = dict[ "ip" ] as? String
-                        self.ipv4PTR.text = dict[ "ptr" ] as? String
-                        self.ipv4ASN.text = dict[ "asn" ] as? String
-                        self.ipv4Country.text = dict[ "country" ] as? String
-                        self.ipv4Description.text = dict[ "desc" ] as? String
+                        self.ipv4Address.text = dict[ "ip" ] as? String ?? "–"
+                        self.ipv4PTR.text = dict[ "ptr" ] as? String ?? "–"
+                        self.ipv4ASN.text = dict[ "asn" ] as? String ?? "–"
+                        self.ipv4Country.text = dict[ "country" ] as? String ?? "–"
+                        self.ipv4Description.text = dict[ "desc" ] as? String ?? "–"
                     }
                     else
                     {
@@ -108,7 +108,6 @@ class i3ViewController: UITableViewController
                         self.ipv4Description.text = "—"
                     }
                     
-                
                     // Did other request already finish?
                     if( ipv6Done )
                     {
@@ -139,11 +138,11 @@ class i3ViewController: UITableViewController
                     
                     if let dict = json
                     {
-                        self.ipv6Address.text = dict[ "ip" ] as? String
-                        self.ipv6PTR.text = dict[ "ptr" ] as? String
-                        self.ipv6ASN.text = dict[ "asn" ] as? String
-                        self.ipv6Country.text = dict[ "country" ] as? String
-                        self.ipv6Description.text = dict[ "desc" ] as? String
+                        self.ipv6Address.text = dict[ "ip" ] as? String ?? "–"
+                        self.ipv6PTR.text = dict[ "ptr" ] as? String ?? "–"
+                        self.ipv6ASN.text = dict[ "asn" ] as? String ?? "–"
+                        self.ipv6Country.text = dict[ "country" ] as? String ?? "–"
+                        self.ipv6Description.text = dict[ "desc" ] as? String ?? "–"
                     }
                     else
                     {
@@ -172,20 +171,64 @@ class i3ViewController: UITableViewController
     }
     
     
-    // Tap on information cell
-    override func tableView( tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath )
+    @IBAction func doCopyIPv4Address()
     {
-        // Determine taped cell
-        let cell = tableView.cellForRowAtIndexPath( indexPath )
-        
-        // Copy content to clipboard
-        if let text = cell?.detailTextLabel!.text
-        {
-            UIPasteboard.generalPasteboard().string = text
-        }
-        
-        // Unselect cell again
-        tableView.deselectRowAtIndexPath( indexPath, animated: true )
+        NSLog( "IPv4 Address: %@", ipv4Address.text ?? "—" )
+        UIPasteboard.generalPasteboard().string = ipv4Address.text
+    }
+    
+    @IBAction func doCopyIPv4PTR()
+    {
+        NSLog( "IPv4 PTR: %@", ipv4PTR.text ?? "—" )
+        UIPasteboard.generalPasteboard().string = ipv4PTR.text
+    }
+    
+    @IBAction func doCopyIPv4ASN()
+    {
+        NSLog( "IPv4 ASN: %@", ipv4ASN.text ?? "—" )
+        UIPasteboard.generalPasteboard().string = ipv4ASN.text
+    }
+    
+    @IBAction func doCopyIPv4Country()
+    {
+        NSLog( "IPv4 Country: %@", ipv4Country.text ?? "—" )
+        UIPasteboard.generalPasteboard().string = ipv4Country.text
+    }
+    
+    @IBAction func doCopyIPv4Description()
+    {
+        NSLog( "IPv4 Description: %@", ipv4Description.text ?? "—" )
+        UIPasteboard.generalPasteboard().string = ipv4Description.text
+    }
+    
+    @IBAction func doCopyIPv6Address()
+    {
+        NSLog( "IPv6 Address: %@", ipv6Address.text ?? "—" )
+        UIPasteboard.generalPasteboard().string = ipv6Address.text
+    }
+    
+    @IBAction func doCopyIPv6PTR()
+    {
+        NSLog( "IPv6 PTR: %@", ipv6PTR.text ?? "—" )
+        UIPasteboard.generalPasteboard().string = ipv6PTR.text
+    }
+    
+    @IBAction func doCopyIPv6ASN()
+    {
+        NSLog( "IPv6 ASN: %@", ipv6ASN.text ?? "—" )
+        UIPasteboard.generalPasteboard().string = ipv6ASN.text
+    }
+    
+    @IBAction func doCopyIPv6Country()
+    {
+        NSLog( "IPv6 Country: %@", ipv6Country.text ?? "—" )
+        UIPasteboard.generalPasteboard().string = ipv6Country.text
+    }
+    
+    @IBAction func doCopyIpv6Description()
+    {
+        NSLog( "IPv6 Description: %@", ipv6Description.text ?? "—" )
+        UIPasteboard.generalPasteboard().string = ipv6Description.text
     }
 }
 
