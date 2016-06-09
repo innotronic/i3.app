@@ -598,7 +598,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">The app queries and displays the device's public IPv4 and IPv6 addresses via our API and displays it together with the corresponding PTR records, AS number(s), as well as the country and description field out of the RIPE database.
+                                        <string key="content">The app queries and displays the device's public IPv4 and IPv6 addresses via our API and displays it together with the corresponding PTR records, AS number(s), as well as the country and description field.
 The information is updated each time the app gets in foreground. Or just "pull to refresh".
 Each entry can be copied to the clipboard.
 </string>

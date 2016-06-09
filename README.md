@@ -1,7 +1,7 @@
 # inno IP info
 
 ## App
-The app queries the devices public IPv4 and IPv6 addresses via our API and displays it together with the corresponding PTR records, AS number(s), as well as the country and description field out of the RIPEStat WHOIS  database.
+The app queries the device's public IPv4 and IPv6 addresses via our API and displays it together with the corresponding PTR records, AS number(s), as well as the country and description field.
 
 The information is updated each time the app gets in foreground. Or just "pull to refresh".
 
